@@ -12,27 +12,12 @@ def button_click(number):
     entry.delete(0, END)
     entry.insert(0, str(current) + str(number))
 
-def button_equal():
-    answer = entry.get()
-    print(14+2)
+def equal_button():
+    answer = eval(entry.get())
+    entry.delete(0,END)
+    entry.insert(0, answer)
 
-def button_add():
-    answer = entry.get()
-    entry.delete(0, END)
-
-def button_sub():
-    answer = entry.get()
-    print(14+2)
-
-def button_mult():
-    answer = entry.get()
-    print(14+2)
-
-def button_div():
-    answer = entry.get()
-    print(14+2)
-
-def button_clear():
+def clear_button():
     entry.delete(0, END)
 
 
@@ -49,11 +34,11 @@ num_8 = Button(root, text="8", width=5, pady=5, command=lambda: button_click(8),
 num_9 = Button(root, text="9", width=5, pady=5, command=lambda: button_click(9), font=("Courier", 24)).grid(row=1, column=2)
 
 num_0 = Button(root, text="0", width=5, pady=5, command=lambda: button_click(0), font=("Courier", 24)).grid(row=4, column=0)
-button_AC = Button(root, text="AC", width=5, pady=5, command=button_clear, font=("Courier", 24)).grid(row=4, column=1)
-button_equal = Button(root, text="=", width=5, pady=5, command=button_equal, font=("Courier", 24)).grid(row=4, column=2)
+button_AC = Button(root, text="AC", width=5, pady=5, command=clear_button, font=("Courier", 24)).grid(row=4, column=1)
+button_equal = Button(root, text="=", width=5, pady=5, command=equal_button, font=("Courier", 24)).grid(row=4, column=2)
 
-button_divide = Button(root, text="÷", width=5, pady=5, command=lambda: button_click("÷"), font=("Courier", 24)).grid(row=1, column=3)
-button_multiply= Button(root, text="x", width=5, pady=5, command=lambda: button_click("x"), font=("Courier", 24)).grid(row=2, column=3)
+button_divide = Button(root, text="÷", width=5, pady=5, command=lambda: button_click("/"), font=("Courier", 24)).grid(row=1, column=3)
+button_multiply= Button(root, text="x", width=5, pady=5, command=lambda: button_click("*"), font=("Courier", 24)).grid(row=2, column=3)
 button_minus = Button(root, text="-", width=5, pady=5, command=lambda: button_click("-"), font=("Courier", 24)).grid(row=3, column=3)
 button_add = Button(root, text="+", width=5, pady=5, command=lambda: button_click("+"), font=("Courier", 24)).grid(row=4, column=3)
 
