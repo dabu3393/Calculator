@@ -5,4 +5,5 @@ This is a small calculator I created using Python and tkinter (creating the GUI)
 - Multiplication
 - Division
 - Find the remainder (%)
+
 Tkinter doesn't produce a very creative GUI, but is the standard for python. 
